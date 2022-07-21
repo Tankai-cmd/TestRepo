@@ -1,0 +1,40 @@
+cd
+pwd
+mkdir Algo1
+cd Algo1
+mkdir config bin logs scripts
+cd Algo1/config/
+vi config.config variables
+cd scripts/
+vi start.sh stop.sh admin.sh
+cd ..
+cd logs/
+vi today.log
+cd
+ls -l
+cd Algo1/config/
+rm variables
+cd ..
+rm -r bin
+cd
+variables
+cd Algo1/
+mkdir bin
+cd logs/
+mkdir oldlogs
+cd oldlogs/
+mkdir 2019 2018 2017
+cd 2017
+vi 2017.log
+cd ..
+cd 2018
+vi 2018.log
+cd ..
+cd 2019
+vi 2019.log
+cd
+rm -r  ~/Algo1/logs/oldlogs
+find -name "*.sh"
+cd /Algo1/scripts/
+ rm -r *.sh
+ history > kai.220721.module3
