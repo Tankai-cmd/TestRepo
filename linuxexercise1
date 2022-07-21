@@ -1,0 +1,15 @@
+1  pwd
+2  ls
+3  ls -l
+4  ls -lrt
+5  cd /
+6  cd
+7  cd ..
+8  ls --help
+9  cd /var
+10  ls -lrhS
+11  lshw
+12  cd
+13  ls
+14  pwd
+15  history > kai.220721.module2
