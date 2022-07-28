@@ -1,0 +1,44 @@
+## Create a file named seq1.txt and write a sentence of your choice in it.
+vi seq1.txt
+
+## Create a file named seq2.txt and write a sentence of your choice in it.
+vi seq2.txt
+
+## Create a file named seq3.txt and write a sentence of your choice in it.
+vi seq3.txt
+
+## Generate a list of these files and add the list to another file named list.txt.
+ls -lrt > list.txt
+
+## Use a single command to copy the contents of all files with seq in the name into a file named total.txt.
+cat seq1.txt seq2.txt seq3.txt | grep 'seq' > total.txt
+
+## Write a single command that shows how many files you have in your current directory.
+ls -lrt | wc -l
+
+## For the following activities, start by putting the following text into a file named LOTR.txt. Use the new file to complete the exercises.
+vi LOTR.txt
+
+## Do a case-insensitive search of the file for hobbit and output the results to the screen.
+cat LOTR.txt | grep -i "hobbit"
+
+## Put the first eight lines and the last three lines into a new file named LOTRtxt.
+cat LOTR.txt
+
+## Run a command on the command line to replace all occurrences of Gollum with Thanos and output the results into a new file named LOTRMarvel.txt.
+sed 's/Gollum/Thanos/g' LOTR.txt > LOTRMarvel.txt
+
+## On the command line, run a command to compare the LOTR.txt with LOTRMarvel.txt.
+diff LOTR.txt LOTRMarvel.txt
+
+## Change the permission on LOTR.txt so that it is read and executable for others and group, and fully accessible for the current user.
+chmod 766 LOTR.txt
+
+## Count the number of words in LOTR.txt.
+wc LOTR.txt
+
+## Rename the LOTR.txt file to LordOfTheRings.txt.
+mv LOTR.txt LordOfTheRings.txt
+
+## Create a compressed tarball named LOTR.tar.gz that includes all the files you have created in this set of exercises.
+tar -czvf LOTR.tar.gz LordOfTheRings.txt LOTRMarvel.txt LOTR.txt

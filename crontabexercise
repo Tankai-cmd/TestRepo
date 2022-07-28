@@ -1,0 +1,30 @@
+## Ensure the fixGenerator.sh script is installed in your home directory.
+crontab -u ubuntu -e (create crontab)
+
+## Set up the script to run Monday-Friday at 6am.
+0 6 * * 1-5 ~/fixGenerator.sh
+
+## Set up the script to run at 6pm every Friday.
+00 18 * * 5 ~/fixGenerator.sh
+
+## Set up the script to run every half hour from 9-4 on Monday, Wednesday and Friday.
+30 9-16 * * 1,3,5 ~/fixGenerator.sh
+
+## Set up the script to run every other hour every day.
+* */2 * * * ~/fixGenerator.sh
+
+## Set up the script to run on May 4th at midday.
+0 12 4 5 * ~/fixGenerator.sh
+
+## Set up the script to run on the 1st of every month at 6:25am.
+25 6 1 * * ~/fixGenerator.sh
+
+## Set up the script to run every 20 minutes every Tuesday between 10am and 2pm.
+20 10-14 2 * * ~/fixGenerator.sh
+
+## Set up the script to run the 1st of every other month on the hour.
+0 0 */2 * * ~/fixGenerator.sh
+
+
+## Set up the script to run at 6am and 8am on Saturday and Sunday.
+0 6,8 * * 6-7 ~/fixGenerator.sh
