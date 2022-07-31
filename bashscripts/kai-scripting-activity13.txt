@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# read sample files
+
+read -p "Sample file 1:" sample1
+read -p "Sample file 2:" sample2
+
+# sort the values in file
+$sample1 | sort > sorted1
+$sample2 | sort > sorted2
+
+# 
+common1=$(comm -12 $sorted1 $sorted2)
+echo "Only in file 1:"
+echo "$common1"
+
+common2=$(comm -12 $sorted2 $sorted1)
+echo "Only in file2:"
+echo "$common2"

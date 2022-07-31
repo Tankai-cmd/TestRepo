@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read filename
+if [ -f "$filename" ];
+then
+        echo "File is found"
+        exit 0
+else
+        echo "File not found" >2&
+        exit 2
+        echo "Creating $filename"
+        touch $filename
+fi

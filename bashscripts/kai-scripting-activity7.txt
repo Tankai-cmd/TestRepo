@@ -1,0 +1,132 @@
+#!/bin/bash
+
+echo "1. Where is saganaki from?"
+read 1
+while [ $1 != " " ];
+do
+	if [ $1 =~ "greece" ];
+	then
+		echo "correct"
+		break
+	else
+		echo "try again"
+	fi
+done
+
+echo "2. What is nori?"
+read 2
+while [ $2 != " " ];
+do
+        if [ $2 =~ "seaweed" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+echo "3. Which is the most stolen food in the world?"
+read 3 
+while [ $3 != " " ];
+do
+        if [ $2 =~ "cheese" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+echo "4. How many bottles of champagne are there in a magnum?"
+read 4 
+while [ $4 != " " ];
+do
+        if [ $4 == "4" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+echo "5. How many segments are inside most oranges?"
+read 5
+while [ $5 != " " ];
+do
+        if [ $5 == "10" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+echo "6. McDonalds burgers don’t rot?"
+read 6
+while [ $6 != " " ];
+do
+        if [ $6 =~ "true" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+echo "7. Limes float, lemons sink?"
+read 7
+while [ $7 != " " ];
+do
+        if [ $7 =~ "false" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+echo "8. Buffalo wings are made from the wings of a buffalo?"
+read 8
+while [ $8 != " " ];
+do
+        if [ $8 =~ "false" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+echo "9. One of the key ingredients of Skittles is beetles?"
+read 9
+while [ $9 != " " ];
+do
+        if [ $9 =~ "true" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done
+
+
+echo "10. Coca Cola used to be made of cocaine?"
+read 10
+while [ $10 != " " ];
+do
+        if [ $10 =~ "true" ];
+        then
+                echo "correct"
+                break
+        else
+                echo "try again"
+        fi
+done

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd ./test/
+
+TODAY=`date +%d.%M.%Y`
+
+for f in *.log;
+do
+	mv -- "$f" "{$f.$TODAY};
+done
+
+	 
+
+

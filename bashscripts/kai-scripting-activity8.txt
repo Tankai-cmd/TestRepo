@@ -1,0 +1,155 @@
+#!/bin/bash
+
+### for i in {1..5}; ###
+### do ###
+###	read -p "Input 1-5:" a b c d e ###
+### done ###
+### echo "Do you want to insert more numbers?" ###
+### read answer ###
+### if [[ "yes" =~ "$answer" ]]; ###
+### then ###
+### 	for l in {1..5}; ###
+### 	do ###
+###		read -p "Input 6-10:" f g h i j ###
+###	done ###
+### else ###
+###	echo "sure" ###
+### fi ###
+echo "Input 5 numbers:"
+read -r -p "Input same numbers seperated by space: " -a a_list
+echo ${a_list[@]}
+
+#!/bin/bash
+
+echo "If you wish to input more than 5 numbers. Input: y/n"
+read answer
+if [ "$answer" == "y" ];
+then
+        read -r -p "Input original 5 numbers and additional 5 more seperated by space: " -a b_list
+        echo ${b_list[@]}
+
+        mult=1
+        for element in ${b_list[@]};
+        do
+                mult=$((mult*i))
+        done
+        echo "Product of intergers: $mult"
+
+        tot=0
+        for val in ${b_list[@]}
+	do
+                let tot+=$val
+        done
+        echo "Sum of intergers: $tot"
+
+        let avg="$tot/10"
+        echo "Average of integers: $avg"
+
+        max=${b_list[0]}
+        min=${b_list[0]}
+	# Update max if applicable
+	for int in ${b_list[@]};
+        do
+                if [[ $int < $min ]];
+                then
+                        min=$int
+                fi
+        done
+        echo "Min integer: $min"
+
+	# Update min if applicable
+	for v in ${b_list[@]};
+        do
+                if [[ $v > $max ]];
+                then
+                        max=$v
+                fi
+        done
+        echo "Max integer: $max"
+
+elif [ "$answer" == "n" ];
+then
+        mult=1
+        for element in ${a_list[@]};
+        do
+                mult=$((mult*i))
+        done
+        echo "Product of intergers: $mult"
+
+        tot=0
+        for val in ${a_list[@]};
+        do
+                let tot+=$val
+        done
+        echo "Sum of intergers: $tot"
+
+        let avg="$tot/5"
+        echo "Average of integers: $avg"
+	min=0
+        for int in ${b_list[@]};
+        do
+                if [[ $int < $min ]];
+                then
+                        min=$int
+                fi
+        done
+        echo "Min integer: $min"
+
+        max=0
+        for v in ${b_list[@]};
+        do
+                if [[ $v > $max ]];
+                then
+                        max=$v
+                fi
+        done
+        echo "Max integer: $max"
+else
+        break
+fi
+
+### Product ###
+# mult=1
+# for element in ${list[@]};
+# do
+# 	mult=$((mult*i))
+# done
+# echo "Product of intergers: $mult"
+
+
+### Sum ###
+# tot=0
+# for val in ${list[@]};
+# do
+#        let tot+=$val
+# done
+# echo "Sum of intergers: $sum"
+
+### Average ###
+# let avg="$sum/10"
+# let avg1="$sum/5"
+# echo "Average of integers: $avg1 $avg"
+
+### Min ###
+# read -r -p "Input same numbers seperated by space: " -a list
+# echo ${list[@]}
+# min=0
+# for int in ${list[@]};
+# do
+#         if [[ $int > $min ]];
+#         then
+#                 min=$int
+#         fi
+# done
+# echo $min
+
+### Max ###
+# max=0
+# for v in ${list[@]};
+# do
+# 	if [[ $v > $max ]];
+# 	then
+# 		max=$v
+# 	fi
+# done
+# echo $max

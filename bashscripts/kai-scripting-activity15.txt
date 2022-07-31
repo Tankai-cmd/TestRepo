@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# moving to working directory
+input="~/FixGen/logs"
+
+cd $input
+
+# create file if does not exists
+if [[ -d "$input" ]];
+then
+	echo "Directory Exists"
+	exit 0
+else
+	mkdir $input && echo "$input created successfully"
+	exit 0
+fi
+
+# move all fixlog files into input directory
+mv ~/FixGen/fixlog* ~/FixGen/logs
+
+# compress log files that are not the latest 3 generate
+# xargs = output from previous command is used as input for another
+ls -lrt | head -n -3 | xargs tar -cvf compressedLog.tar
+echo "$tarfile been successfully created"
+exit 0

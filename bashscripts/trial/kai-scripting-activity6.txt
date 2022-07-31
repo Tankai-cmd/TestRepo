@@ -1,0 +1,14 @@
+#!/bi/bash
+
+read a
+read b
+
+while [[ a != " " ]] && [[ b!= " " ]];
+do
+	if [[ a > b ]];
+	then
+		echo "True"
+	else [[ a < b ]];
+		echo "False"
+	fi
+done

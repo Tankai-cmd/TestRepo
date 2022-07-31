@@ -1,0 +1,19 @@
+#!/bin/bash
+
+read a
+read b
+
+while [ $a != " " ] && [ $b != " " ];
+do
+        if [[ $a > $b ]];
+        then
+		let "c=$a-$b"
+                echo $c
+		break
+        else [[ $a < $b ]];
+		let "d=$b-$a"
+                echo $d
+		break
+	fi
+done
+

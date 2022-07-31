@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# take file in as arguments
+read -p "File 1:" file1
+read -p "File 2:" file2
+
+count=${wdiff -1 -2 $file1 $file2 | sort -n | uniq | wc -l)
+if [ "$count" != "0" ];
+then
+	echo "The two files have at least one common element"
+else
+	echo "The two files do not have anything in common"
+fi

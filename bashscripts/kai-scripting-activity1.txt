@@ -1,0 +1,14 @@
+#!/bin/bash
+
+whoami
+
+date +%d.%M.%Y
+
+date +%H:%M:%S
+
+pwd
+
+ls | wc -l
+
+ls -lSh | head -2
+

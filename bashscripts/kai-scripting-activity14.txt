@@ -1,0 +1,16 @@
+#!/bin/bash
+
+input="~/book"
+
+# replacing all space with line delimiter
+# replacing all characters to lower case
+cat book | tr ' ' '\n'  | tr '[:upper:]' '[:lower:]' > book1
+
+# removing all nonalphanumerical character (^ => circumflex = expression specifying a set of characters to match, if not they will be removed)
+sed 's/[^a-zA-Z0-9]//g' book1 > book2
+
+# count uniq words and sort by counts
+# uniq -c = count occurrences
+# sort -bnr = sorts numeric reverse order (ignore leading blanks)
+cat book2 | sort | uniq -c | sort -bnr > wordcounter
+cat wordcounter

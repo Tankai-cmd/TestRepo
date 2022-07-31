@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Enter String:"
+read input
+
+echo $input | rev
+

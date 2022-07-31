@@ -1,0 +1,12 @@
+#!/bin/bash
+
+read password
+while [ $password ];
+do
+	if [ $password <= len(8) ];
+	then
+		echo "password is too short"
+	else [[ $password =~ 0-9 ]] && [[ $password =~ a-z ]] && [[ $password =~ A-Z ]];
+		echo "password needs to be alphanumerical and upper/lower case"
+	fi
+done

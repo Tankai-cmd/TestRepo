@@ -1,0 +1,38 @@
+#!/bin/bash
+
+read -p "Input 1:" a
+n="wc "$a" "
+if [ $n < 5 ];
+then
+	echo "please provide min of 5 numbers"
+	read a 
+else
+	echo "inserted"
+fi
+
+echo "Input 2"
+read b
+m="wc "$b" "
+if [ $m < 10 ];
+then
+        echo "please provide min of 10 numbers"
+        read b
+else
+        echo "inserted"
+fi
+
+### Product ###
+let p="$a*$b"
+echo "Product of intergers: $p"
+
+### Average ###
+let sum="$a+$b"
+let avg="$sum/2"
+echo "Average of integers: $avg"
+
+
+### Sum ###
+echo "Sum of intergers: $sum"
+
+### Min ###
+
