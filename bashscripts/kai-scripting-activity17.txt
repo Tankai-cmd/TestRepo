@@ -1,0 +1,23 @@
+#!/bin/bash
+
+read fixlog
+
+if [ -f "$fixlog" ];
+then
+	echo "File is present"
+	# replace Fix tag with empty space
+	sed 's/FIX4.4/ /g' $fixlog > "$fixlog"
+else
+	echo "No such file present"
+	exit 1
+fi
+
+# ensuring only message records in the file
+awk -F ';' 'NF==23 {print}' "$fixlog" > testlog
+grep "55=" testlog > testlog_1
+
+# adding header to file
+sed '1i\Client; Message Type; Stock; Quantity; Price; Side; Order ID; Last Quantity; Exec ID; Last Price' testlog_1 > testlog_2
+
+# determining type of message
+awk -F ':' {print $0} testlog_2 > output.csv

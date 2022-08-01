@@ -1,3 +1,7 @@
 #!/bin/bash
 
-options=
+# shuf -i A-B -nZ = Z random numbers between A and B
+shuf -i 1-50 -n6 | sort -n  | xargs -n6
+
+# additional 1 bonus number
+shuf -i 1-10 -n1 | xargs -n1
