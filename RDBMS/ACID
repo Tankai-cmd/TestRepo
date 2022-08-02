@@ -1,0 +1,9 @@
+ACID
+
+A = all or nothing (ensures that all steps within the trasactions must be successful before commiting the change, if one of the steps fail, the whole trasaction will be void.)
+
+C = no constraints can be violated so that the correctness of the data can be ensured.
+
+I = ensure that each user's session are seperated from each other before committing the changes, in a scenario where both users are updating the same record, one user would have to commit the changes successfully before the other user would be able to implement any changes.
+
+D = writing data to persistent storage.
