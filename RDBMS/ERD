@@ -1,0 +1,22 @@
+Entity Relationship Diagrams (ERD)
+
+Visual way to understand how the different entities are related to each other.
+
+The relationship between each entities describes how they interact with each other. They are usually represented in by a line drawn connecting both entities. The cardinality represented by the notations on the line effectively represents the relationship in a numerical context, particularl between minimum and maximum. 
+Types of Cardinality:
+- | one 
+- <- many
+- || one (and only one)
+- O| zero or one
+- |<- one or many
+- O<- zero or many
+
+Types of Relationship:
+- One to One Cardinality = Eg. User only has 1 user profile
+- One to Many Cardinality = Eg. One department can have many students
+- Many to Many Cardinality = Eg. Both inventory and sales can have many products
+
+Entity Attributes:
+- Primary Key
+- Foreign Key
+

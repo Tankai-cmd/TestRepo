@@ -1,0 +1,20 @@
+Relational Design and Normalization
+
+Normalization = reduce data redundancy 
+
+3 Forms of Normalization:
+
+1 Normal Form (1NF)
+- no duplicated rows, must be uniquely identifiable
+- each column only contains a single value
+- each value cannot be further split (eg. First name and Last name can be seperated)
+
+2 Normal Form (2NF)
+- must be in 1NF
+- no partial dependency (table can only contain attributes that is related to all the primary keys of the table, if the attribute only depends either 1 of the primary keys, the attribute and the dependent primary key will have form a seperate table)
+
+3 Normal Form (3NF)
+- must be in 1NF and 2NF
+- no transitive dependency (table cannot contain attributes that depend on non primary key attribute instead of the primary key)
+
+Denormalisation = improve query performance at the expense of storage and data accuracy
